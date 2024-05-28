@@ -35,4 +35,5 @@ Note:
     - https://d2.naver.com/helloworld/0315536
 - 입력크기가 10⁵일 때, O(NlogN)은 10⁵ X 16.61 이기 떄문에 O(NlogN)의 복잡도를 가지는 것은 괜찮다. O(N²)이 되는 정렬로 풀면 시간초과 나서 통과 못함
 - sort() or sorted()
+- 최종 시간복잡도는 O(NlogN)
 ''' 
