@@ -4,7 +4,7 @@
 난이도: ⭐️
 저자 권장 시간: 30분
 권장 시간 복잡도: O(N²log(N²))
-출제: [월간 코드 챌린지](https://school.programmers.co.kr/learn/courses/30/lessons/68644) 
+출제: 프로그래머스
 정답률: 68%
 
 제약조건:
