@@ -19,7 +19,7 @@
 '''
 
 
-# 다른 사람 풀이
+# 저자 풀이
 def solution(arr1, arr2):
     r1, c1 = len(arr1), len(arr1[0]) # 1. arr1, arr2가 ? X ? 행렬인지 계산하기
     r2, c2 = len(arr2), len(arr2[0])
@@ -29,7 +29,6 @@ def solution(arr1, arr2):
         for j in range(c2): # 4. arr2의 각 열에 대해 
             for k in range(c1): # 5. 결과 행렬에 값을 구한다.
                 answer[i][j] += arr1[i][k] * arr2[k][j]
-
     return answer
 
 

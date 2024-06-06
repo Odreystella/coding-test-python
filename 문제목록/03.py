@@ -31,7 +31,7 @@ def solution(numbers):
     return result
 
 
-# 다른 사람 풀이
+# 저자 풀이
 def solution(numbers):
     answer = []
     for i in range(len(numbers)):
