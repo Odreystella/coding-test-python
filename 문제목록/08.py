@@ -28,9 +28,9 @@ def solution(s):
             return False
 
         if item == '(':
-            stack.append(item)
+            stack.append(item)  # 시간복잡도 O(1)
         else:
-            stack.pop()
+            stack.pop()  # 시간복잡도 O(1)
 
     return len(stack) == 0
 
