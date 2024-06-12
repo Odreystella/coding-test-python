@@ -21,7 +21,7 @@
 
 
 # 시간 복잡도 O(N^2)
-def solution1(s):
+def solution(s):
     answer = 0
     rotated_s = ''
 
@@ -87,7 +87,7 @@ def solution(s):
 
 # 저자 풀이
 # 시간 복잡도 O(N^2)
-def solution1(s):
+def solution(s):
     answer = 0
     n = len(s)
     for i in range(n):
@@ -131,6 +131,7 @@ Note:
     - 처음에 왼쪽으로 한칸 움직이고, 그 안에서
         - 그 문자열을 돌면서 stack에 넣어보고 짝이 맞는지 체크
         - 짝이 맞으면 카운팅하는 변수값 증가
+    - s의 길이가 10^3이라 O(N^2)으로 풀어도 10^6정도라 시간 초과는 안날것 같다.
 - 저자의 풀이와 비교해봤을 때 배울 점
     - c = s[(i + j) % n] 이 부분은 좀 더 이해가 필요하다.
     - for ~ else 구문! 
