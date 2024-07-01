@@ -19,17 +19,32 @@
 
 
 # 시간 복잡도 O(N^2)
-def solution(prices):
+def solution1(prices):
     answer = []
     for i in range(len(prices)):  # O(N)
         count = 0
         for j in range(i, len(prices)-1):  # O(N)
-            count += 1 
+            count += 1
             if prices[i] > prices[j+1]:  # 이전 주식 가격보다 떨어졌는지 비교
                 answer.append(count)  # O(1)
                 break
         else:  # 이전 주식가격보다 떨어지지 않은 경우
             answer.append(count)  # for ~ else 구문: for문이 break에 의해 끝나지 않고 끝까지 수행된 경우 동작하는 구문
+    return answer
+
+
+# range 부분 이렇게 하는게 더 좋은 표현인듯.
+def solution(prices):
+    answer = []
+    for i in range(len(prices)):
+        count = 0
+        for j in range(i+1, len(prices)):
+            count += 1 
+            if prices[i] > prices[j]: # 이전 가격이 더 클 때 = 주식 가격이 떨어짐
+                answer.append(count)
+                break
+        else:
+            answer.append(count)
     return answer
 
 
