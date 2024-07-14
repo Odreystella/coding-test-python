@@ -26,6 +26,7 @@ def solution():
 def solution():
     return
 
+
 # TEST 코드 입니다. 주석을 풀고 실행시켜보세요
 print(solution()) # 반환값 : 
 print(solution()) # 반환값 :
