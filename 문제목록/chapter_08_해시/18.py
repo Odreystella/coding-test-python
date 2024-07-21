@@ -27,6 +27,7 @@ def solution(arr, target):
         num2 = target - num1
         if num1 != num2 and num2 in arr:  # O(N)
             dict[num1] = num2
+
     for k, v in dict.items():  # O(K)
         if k + v == target:
             return True
@@ -38,6 +39,7 @@ def solution(arr, target):
     dict = {}
     for num1 in arr:  # O(N)
         num2 = target - num1
+
         if num1 != num2 and num2 in arr:  # O(N)
             dict[num1] = num2
 
