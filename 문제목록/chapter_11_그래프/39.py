@@ -30,23 +30,19 @@ from collections import defaultdict, deque
 
 
 def bfs(adj_list, start):
-    visited = set()  # 방문 표시
-
     queue = deque([start])  # deque()는 이터러블 객체를 인수로 받음
-    visited.add(start)
-
-    # result = []
-    # result.append(start)
+    visited = []
 
     while queue:
-        node = queue.popleft()  # 큐에 있는 원소중에 가장 먼저 푸시된 원소를 팝한 값
-        for neighbor in adj_list.get(node, []):  # 팝한 노드의 인접한 이웃 노드들 가져오기
+        current_node = queue.popleft()  # 큐에 있는 원소중에 가장 먼저 푸시된 원소를 팝한 값
+        if current_node not in visited:  # visited를 set()으로 선언하는 방법도 있음
+            visited.append(current_node)
+
+        for neighbor in adj_list.get(current_node, []):  # 팝한 노드의 인접한 이웃 노드들 가져오기
             if neighbor not in visited:  # 인접한 노드가 방문되지 않은 경우
                 queue.append(neighbor)  # 큐에 푸시하고
-                visited.add(neighbor)  # 방문 처리
-                # result.append(neighbor)
 
-    return list(visited)
+    return visited
 
 
 def solution(graph, start):
@@ -71,4 +67,10 @@ Note:
 - 문제 읽고 고민한 내용
 - 저자의 풀이와 비교해봤을 때 배울 점
     - bfs 개념을 코드로 짜면 이런거구나 코드 보면서 이해하려고 했음.
+    - 1. popleft()할 때 시간복잡도가 O(1)인 deque 사용
+        - deque에 시작 노드 푸시
+        - deque에 선입 노드 pop
+        - 팝한 노드 방문 처리
+        - 팝한 노드 인접 노드 중에서 미방문 노드 푸시
+        - deque가 빌 때까지 반복
 """
